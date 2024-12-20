@@ -13,7 +13,7 @@ export const Footer = () => {
                             E-Commerce
                         </p>
                     </div>
-                    <Separator className=" border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+                    <Separator className=" border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-2" />
                     <span className="block text-sm text-gray-500 sm_text-center dark:text-gray-400">
                         &copy; 2024
                         <Link href="#"><strong>Made By: </strong>Sebastian Fernandez</Link>

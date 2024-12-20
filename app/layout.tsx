@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Urbanist } from "next/font/google";
 import {Navbar} from "@/components/ui/navbar";
 import { Footer } from "@/components/ui/Footer";
+import { ThemeProvider } from "@/components/ui/theme-provider";
 import "./globals.css";
 
 const urbanist = Urbanist({subsets: ["latin"] });
@@ -20,9 +21,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={urbanist.className}>
-      <Navbar />
-      {children}
-      <Footer />
+      <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+        <Navbar />
+        {children}
+        <Footer />
+      </ThemeProvider>
       </body>
     </html>
   );

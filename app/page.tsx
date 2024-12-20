@@ -1,11 +1,14 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button"
+import { FeaturedProducts } from "@/components/ui/featured-products";
+
+
+
 
 export default function Home() {
   return (
     <main>
-      <h1>Hello world</h1>
-      <Button>Click me</Button>
+      <FeaturedProducts />
     </main>
   );
 }
