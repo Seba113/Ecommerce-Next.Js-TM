@@ -6,13 +6,17 @@ import SkeletonSchema from "./skeletonSchema"
 import { ProductType } from "@/types/product"
 import { Card, CardContent } from "./card"
 import { Expand, ShoppingCart } from "lucide-react"
+import { IconButton } from "./icon-button"
+import { useRouter } from "next/navigation"
 
 export const FeaturedProducts = () => {
 
     const {loading, result}: ResponseType = useGetFeaturedProducts();
     console.log(result)
+    const router = useRouter();
     
     return (
+
         <div className="max-w-6xl py-4 mx-auto sm:py-16 sm:px-24">
             <h3 className="px-6 text-3xl sm:pb-8">Productos destacados</h3>
             <Carousel>
@@ -22,7 +26,8 @@ export const FeaturedProducts = () => {
                     )}
                     {result !== null && (
                         result.map((product: ProductType) =>{
-                            const {images, id} = product
+                            const {images, id, slug, productName} = product;
+                            
                             
                             return (
                                 <CarouselItem key={id} className="md:basis-1/2 lg:basis-1/3 group">
@@ -34,11 +39,27 @@ export const FeaturedProducts = () => {
                                                     alt="Image Featured" />
                                                     <div className="absolute w-full px-6 transition duration-200 opacity-0 group-hover:opacity-100 bottom-5">
                                                         <div className="flex justify-center gap-x-6">
-                                                            <Expand />
-                                                            <ShoppingCart />
+                                                            <IconButton 
+                                                            onClick={()=> router.push(`product/${slug}`)} 
+                                                            icon={<Expand size={20}/>} 
+                                                            className="text-gray-600"
+                                                            />
+
+                                                            <IconButton 
+                                                            onClick={()=> console.log("add item")} 
+                                                            icon={<ShoppingCart size={20}/>} 
+                                                            className="text-gray-600"/>
+                                                            
                                                         </div>
                                                     </div>
                                             </CardContent>
+
+                                            <div className="flex justify-between gap-4 px-8">
+                                                <h3 className="text-lg font-bold">{productName}</h3>
+                                                <div className="flex items-center justify-between gap-3">
+                                                    
+                                                </div>
+                                            </div>
                                         </Card>
                                     </div>
                                 
