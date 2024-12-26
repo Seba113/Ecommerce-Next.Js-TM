@@ -1,7 +1,7 @@
 "use client"
 import { useGetFeaturedProducts } from "@/api/useGetFeaturedProducts"
 import { ResponseType } from "@/types/response"
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import SkeletonSchema from "./skeletonSchema"
 import { ProductType } from "@/types/product"
 import { Card, CardContent } from "./card"
@@ -26,7 +26,8 @@ export const FeaturedProducts = () => {
                     )}
                     {result !== null && (
                         result.map((product: ProductType) =>{
-                            const {images, id, slug, productName} = product;
+                            const {images, id, slug, productName, category} = product;
+                            const {categoryName} = category;
                             
                             
                             return (
@@ -57,7 +58,9 @@ export const FeaturedProducts = () => {
                                             <div className="flex justify-between gap-4 px-8">
                                                 <h3 className="text-lg font-bold">{productName}</h3>
                                                 <div className="flex items-center justify-between gap-3">
-                                                    
+                                                    <p className="text-white bg-black rounded dark:bg-white dark:text-black px-2 py-1 w-fit">
+                                                        {categoryName}
+                                                    </p>
                                                 </div>
                                             </div>
                                         </Card>
@@ -68,6 +71,8 @@ export const FeaturedProducts = () => {
                         })
                     )}
                 </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext className="hidden sm:flex" />
             </Carousel>
         </div>
     );
