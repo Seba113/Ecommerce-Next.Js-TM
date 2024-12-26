@@ -22,9 +22,9 @@ export function ChooseCategory() {
                             <img 
                                 src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${category.image.url}`} 
                                 alt={category.categoryName} 
-                                className='max-w-[270px] transition duration-300 ease-in-out rounded-lg hover:scale-110'
+                                className='max-w-[270px] transition duration-300 ease-in-out rounded-lg hover:scale-105'
                             />
-                            <p className='absolut w-full font-bold text-center py-2 text-lg text-white bottom-5 backdrop-blur-lg'>
+                            <p className='absolut w-full font-bold text-center py-2 text-lg light:text-black dark:text-white bottom-5 backdrop-blur-lg'>
                                 {category.categoryName}
                             </p>
                         </Link>    
