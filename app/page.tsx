@@ -6,12 +6,12 @@ import { ChooseCategory } from "@/components/ui/choose-category";
 
 
 
+
 export default function Home() {
   return (
     <main>
       <FeaturedProducts />
       <ChooseCategory />
-      
     </main>
   );
 }

@@ -12,7 +12,6 @@ import { useRouter } from "next/navigation"
 export const FeaturedProducts = () => {
 
     const {loading, result}: ResponseType = useGetFeaturedProducts();
-    console.log(result)
     const router = useRouter();
     
     return (
