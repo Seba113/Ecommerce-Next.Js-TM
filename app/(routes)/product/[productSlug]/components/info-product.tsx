@@ -12,7 +12,7 @@ const InfoProduct = (props: InfoProductProps) =>{
 
     const {product} = props;
     return (
-        <div>
+        <div className="px-6">
             <div className="justify-between mb-3 sm:flex">
                 <h1 className="text-2xl">{product.productName}</h1>
                 <div className="flex items-center justify-between gap-3">

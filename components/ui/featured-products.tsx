@@ -8,11 +8,14 @@ import { Card, CardContent } from "./card"
 import { Expand, ShoppingCart } from "lucide-react"
 import { IconButton } from "./icon-button"
 import { useRouter } from "next/navigation"
+import { useCart } from "@/hooks/use-cart"
 
 export const FeaturedProducts = () => {
 
     const {loading, result}: ResponseType = useGetFeaturedProducts();
     const router = useRouter();
+    const {addItem, items} = useCart();
+    console.log(items)
     
     return (
 
@@ -46,7 +49,7 @@ export const FeaturedProducts = () => {
                                                             />
 
                                                             <IconButton 
-                                                            onClick={()=> console.log("add item")} 
+                                                            onClick={()=> addItem(product)} 
                                                             icon={<ShoppingCart size={20}/>} 
                                                             className="text-gray-600"/>
                                                             
