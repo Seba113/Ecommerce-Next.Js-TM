@@ -2,6 +2,8 @@ import { ProductType } from "@/types/product"
 import { useRouter } from "next/navigation"
 import { useCart } from "@/hooks/use-cart"
 import { formatPrice } from "@/lib/formatPrice"
+import { cn } from "@/lib/utils"
+import { X } from "lucide-react"
 
 interface CartItemProps {
     product: ProductType
@@ -28,11 +30,13 @@ const CartItem = (props: CartItemProps) => {
                     <p className="font-bold">
                         {formatPrice(product.price)}
                     </p>
-                    
                 </div>
-
             </div>
-
+            <div>
+                <button className={cn("rounded-full flex items-center justify-center bg-white border shadow-md p-1 hover:scale-110 transition")}>
+                    <X size={20} onClick={() => removeItem(product.id)} />
+                </button>
+            </div>
         </li>
     )
 }
