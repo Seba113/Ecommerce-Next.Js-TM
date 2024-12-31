@@ -10,7 +10,6 @@ export const Footer = () => {
                             <span className="font-bold mr-2">
                                 TastyMarket
                             </span>
-                            E-Commerce
                         </p>
                     </div>
                     <Separator className=" border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-2" />
