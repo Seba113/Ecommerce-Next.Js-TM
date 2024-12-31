@@ -15,7 +15,7 @@ export const FeaturedProducts = () => {
     const {loading, result}: ResponseType = useGetFeaturedProducts();
     const router = useRouter();
     const {addItem, items} = useCart();
-    console.log(items)
+    
     
     return (
 
@@ -55,15 +55,12 @@ export const FeaturedProducts = () => {
                                                             
                                                         </div>
                                                     </div>
+                                                    
                                             </CardContent>
 
-                                            <div className="flex justify-between gap-4 px-8">
+                                            <div className="flex  justify-center gap-4 px-8">
                                                 <h3 className="text-lg font-bold">{productName}</h3>
-                                                <div className="flex items-center justify-between gap-3">
-                                                    <p className="text-white bg-black rounded dark:bg-white dark:text-black px-2 py-1 w-fit">
-                                                        {categoryName}
-                                                    </p>
-                                                </div>
+                                                
                                             </div>
                                         </Card>
                                     </div>
