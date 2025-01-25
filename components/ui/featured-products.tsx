@@ -28,8 +28,8 @@ export const FeaturedProducts = () => {
                     )}
                     {result !== null && (
                         result.map((product: ProductType) => {
-                            const { images, id, slug, productName, category } = product;
-                            const { categoryName } = category;
+                            const { images, id, slug, productName} = product;
+                            //const { categoryName } = category;
 
 
                             return (

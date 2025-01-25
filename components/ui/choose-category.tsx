@@ -7,7 +7,7 @@ import { CategoryType } from '@/types/category';
 
 
 export function ChooseCategory() {
-    const {result, loading, error}: ResponseType = useGetCategories();
+    const {result, loading}: ResponseType = useGetCategories();
     return (
         <div className='max-w-6xl py-4 mx-auto sm:py-16 sm:px-24'>
             <h3 className='px-6 pb-4 text-3xl sm:pb-8'>Elegí tu categoría favorita</h3>

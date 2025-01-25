@@ -39,12 +39,9 @@ export default function Page() {
                         </div>
                         <div className="flex items-center justify-center w-full mt-3">
                             <Button className="w-full" onClick={() => handleBuy()}>Comprar</Button>
-
                         </div>
                     </div>
-
                 </div>
-
             </div>
 
         </div>

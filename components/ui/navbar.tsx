@@ -1,6 +1,6 @@
 "use client"
 import { useRouter} from "next/navigation"
-import { ShoppingCart, Heart, User, BaggageClaim } from "lucide-react"
+import { ShoppingCart, Heart, BaggageClaim } from "lucide-react"
 import { MenuList } from "./menu-list"
 import { ItemsMenuMobile } from "./items-menu-mobile"
 import { ToggleTheme } from "./toggle-theme"
