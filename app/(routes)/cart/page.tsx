@@ -6,9 +6,14 @@ import { formatPrice } from "@/lib/formatPrice";
 import CartItem from "./components/cart-item";
 
 export default function Page() {
-    const {items, removeAll} = useCart();
+    const {items, removeAll, buyItems} = useCart();
     const price = items.map((product => product.price))
     const totalPrice = price.reduce((total, price) => total + price, 0)
+
+    function handleBuy() {
+        buyItems(),
+        removeAll()
+    }
 
     return (
         <div className="max-q-6xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
@@ -33,7 +38,7 @@ export default function Page() {
                             <p>{formatPrice(totalPrice)}</p>
                         </div>
                         <div className="flex items-center justify-center w-full mt-3">
-                            <Button className="w-full" onClick={() => console.log("comprar")}>Comprar</Button>
+                            <Button className="w-full" onClick={() => handleBuy()}>Comprar</Button>
 
                         </div>
                     </div>

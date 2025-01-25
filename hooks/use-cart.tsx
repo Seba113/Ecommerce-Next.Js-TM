@@ -7,7 +7,8 @@ interface CartStore {
     items: ProductType[],
     addItem:(data: ProductType) => void,
     removeItem:(id: number) => void,
-    removeAll: () => void
+    removeAll: () => void,
+    buyItems: () => void
 
 }
 
@@ -43,7 +44,16 @@ export const useCart = create(persist<CartStore>((set, get) => ({
             set({
                 items: []
             })
+        },
+        buyItems: () => {
+            set({
+                items: [],
+            })
+            toast({
+                title: "Gracias por tu compra 🎉",
+            })
         }
+
 }), {
     name: "cart-storage",
     storage: createJSONStorage(() => localStorage)

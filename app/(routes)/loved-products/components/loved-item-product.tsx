@@ -41,7 +41,7 @@ export const LovedItemProduct = (props: LovedItemProductProps) => {
                 <Button className="mt-5 rounded-full" onClick={addToCheckout}>Añadir al carrito</Button>
             </div>
             <div>
-                <button className={cn("rounded-full flex items-center justify-center bg-white border shadow-md p-1 hover:scale-110 transition")}>
+                <button className={cn("rounded-full flex items-center justify-center dark:text-white border shadow-md p-1 hover:scale-110 transition")}>
                     <X size={20} onClick={() => removeLovedItem(product.id)}></X>
                 </button>
 

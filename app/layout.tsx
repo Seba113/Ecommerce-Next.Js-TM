@@ -10,8 +10,8 @@ const urbanist = Urbanist({subsets: ["latin"] });
 
 
 export const metadata: Metadata = {
-  title: "Tasty Market",
-  description: "Welcome to Tasty Market",
+  title: "Funko Market",
+  description: "Welcome to Funko Market",
 };
 
 export default function RootLayout({
