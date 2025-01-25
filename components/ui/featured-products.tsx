@@ -14,7 +14,7 @@ export const FeaturedProducts = () => {
 
     const { loading, result }: ResponseType = useGetFeaturedProducts();
     const router = useRouter();
-    const { addItem, items } = useCart();
+    const { addItem} = useCart();
 
 
     return (
