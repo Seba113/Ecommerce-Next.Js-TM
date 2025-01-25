@@ -19,7 +19,6 @@ export const LovedItemProduct = (props: LovedItemProductProps) => {
 
     const addToCheckout = () => {
         addItem(product);
-        removeLovedItem(product.id)
     }
 
     return (
