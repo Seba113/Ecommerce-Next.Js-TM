@@ -16,21 +16,21 @@ import {
 
 const components: { title: string; href: string; description: string }[] = [
   {
-    title: "Hamburguesas",
-    href: "/category/hamburguesas",
+    title: "Harry Potter",
+    href: "/category/harrypotter",
     description:
-      "Toda la variedad de hamburguesas y combos para que eligas.",
+      "Toda la variedad de FunkoPop de Harry Potter!",
   },
   {
-    title: "Embutidos",
-    href: "/category/embutidos",
+    title: "Marvel",
+    href: "/category/marvel",
     description:
-      "Frankfurtes, chorizos, jamones y mas.",
+      "Superheroes, villanos, y más!",
   },
   {
-    title: "Congelados",
-    href: "/category/congelados",
-    description: "Mira nuestros productos congelados para vos.",
+    title: "Anime",
+    href: "/category/anime",
+    description: "Mira nuestros funkos de anime!",
   }
 ]
 
@@ -39,36 +39,7 @@ export const MenuList = () => {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Sobre Nosotros</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-              <li className="row-span-3">
-                <NavigationMenuLink asChild>
-                  <a
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                    href="/"
-                  >
-
-                    <div className="mb-2 mt-4 text-lg font-medium">
-                      Tasty Market
-                    </div>
-                    <p className="text-sm leading-tight text-muted-foreground">
-                      Breve descripcion de la empresa.
-                    </p>
-                  </a>
-                </NavigationMenuLink>
-              </li>
-              <ListItem href="/shops" title="Conocenos">
-                Somos mucho más que una tienda.
-              </ListItem>
-              <ListItem href="/offers" title="Horarios de atención y reparto">
-                Conoce todo sobre nuestro sistema de repartos y horarios.
-              </ListItem>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>Productos</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="text-1xl">Productos</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
               {components.map((component) => (

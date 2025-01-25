@@ -8,7 +8,7 @@ export const Footer = () => {
                     <div className="sm:flex sm:items-center sm:justify-between">
                         <p>
                             <span className="font-bold mr-2">
-                                TastyMarket
+                                FunkoMarket
                             </span>
                         </p>
                     </div>

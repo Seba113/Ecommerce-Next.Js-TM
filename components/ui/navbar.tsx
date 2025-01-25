@@ -13,7 +13,7 @@ export const Navbar = () => {
 
     return (
         <div className="flex items-center justify-between p-4 cursor-pointer sm:max-w-4xl mx-auto md:max-w-6xl">
-            <h2 className="text-3xl" onClick={() => router.push("/")}>Tasty 
+            <h2 className="text-3xl" onClick={() => router.push("/")}>Funko 
                 <span className="font-bold">Market</span>
             </h2>
             <div className="items-center justify-between hidden sm:flex">

@@ -12,9 +12,9 @@ export const ItemsMenuMobile = () => {
                 <Menu />
             </PopoverTrigger>
             <PopoverContent>
-                <Link href="/category/hamburguesas" className="block">Hamburguesas</Link>
-                <Link href="/category/embutidos" className="block">Embutidos</Link>
-                <Link href="/category/otros" className="block">Otros</Link>
+                <Link href="/category/harrypotter" className="block">Harry Potter</Link>
+                <Link href="/category/marvel" className="block">Marvel</Link>
+                <Link href="/category/anime" className="block">Anime</Link>
             </PopoverContent>
         </Popover>
     )
