@@ -11,7 +11,7 @@ export default function Page() {
     const totalPrice = price.reduce((total, price) => total + price, 0)
 
     function handleBuy() {
-        buyItems(),
+        buyItems();
         removeAll()
     }
 
