@@ -30,7 +30,7 @@ export default function Page() {
                     </ul>
                 </div>
                 <div className="max-w-xl dark:text-black">
-                    <div className="p-6 rounded-lg bg-slate-100 dark:bg-gray">
+                    <div className="mt-6 p-6 rounded-lg bg-slate-100 dark:bg-gray">
                         <p className="font-semibold mb-3 text-lg">Resumen de pedido</p>
                         <Separator />
                         <div className="flex justify-between gap-6 my-4">
