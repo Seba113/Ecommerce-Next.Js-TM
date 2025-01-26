@@ -30,6 +30,7 @@ export const FeaturedProducts = () => {
                         result.map((product: ProductType) => {
                             const { images, id, slug, productName} = product;
                             //const { categoryName } = category;
+                            console.log(images)
 
 
                             return (
@@ -41,18 +42,7 @@ export const FeaturedProducts = () => {
                                                     src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${images[0].url}`}
                                                     alt="Image Featured" />
                                                 <div className="absolute w-full px-6 transition duration-200 opacity-0 group-hover:opacity-100 bottom-5">
-
-                                                </div>
-
-                                            </CardContent>
-
-                                            <div className="flex justify-center gap-4 px-8">
-                                                <h3 className="text-lg font-bold">{productName}</h3>
-                                            </div>
-                                            <div className="flex justify-center gap-4 px-8">
-                                                <p>$ {product.price}</p>
-                                            </div>
-                                            <div className="flex justify-center gap-x-6">
+                                                <div className="flex justify-center gap-x-6">
                                                 <IconButton
                                                     onClick={() => router.push(`product/${slug}`)}
                                                     icon={<Expand size={20} />}
@@ -65,6 +55,16 @@ export const FeaturedProducts = () => {
                                                     className="text-gray-600"
                                                  />
 
+                                            </div>
+                                                </div>
+
+                                            </CardContent>
+
+                                            <div className="flex justify-center gap-4 px-8">
+                                                <h3 className="text-lg font-bold">{productName}</h3>
+                                            </div>
+                                            <div className="flex justify-center gap-4 px-8">
+                                                <p>$ {product.price}</p>
                                             </div>
                                         </Card>
                                     </div>

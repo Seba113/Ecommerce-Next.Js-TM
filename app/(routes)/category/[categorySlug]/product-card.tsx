@@ -29,9 +29,11 @@ const ProductCard = (props: ProductTypeProps) => {
                                     <IconButton onClick={() => console.log("product")} icon={<ShoppingCart size={20} className="text-gray-600" />} />
                                 </div>
                             </div>
+                            
                         </CarouselItem>
                     ))}
                 </CarouselContent>
+                
             </Carousel>
             <p className="text-1xl text-center">{product.productName}</p>
             <p className="font-bold text-center">${formatPrice(product.price)}</p>
