@@ -30,10 +30,7 @@ export const FeaturedProducts = () => {
                         result.map((product: ProductType) => {
                             const { images, id, slug, productName} = product;
                             //const { categoryName } = category;
-                            console.log(images)
-
-
-                            return (
+                         return (
                                 <CarouselItem key={id} className="md:basis-1/2 lg:basis-1/3 group">
                                     <div className="p-1">
                                         <Card className="py-4 border-gray-200 shadow-none">
