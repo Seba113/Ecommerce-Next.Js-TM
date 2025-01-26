@@ -5,6 +5,7 @@ import { Footer } from "@/components/ui/Footer";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import { Toaster } from "@/components/ui/toaster";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react"
 
 const urbanist = Urbanist({subsets: ["latin"] });
 
@@ -33,6 +34,7 @@ export default function RootLayout({
         <Toaster />
         <Footer />
       </ThemeProvider>
+      <Analytics />
       </body>
     </html>
   );
