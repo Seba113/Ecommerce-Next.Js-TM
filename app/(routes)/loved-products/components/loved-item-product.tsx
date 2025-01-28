@@ -25,7 +25,7 @@ export const LovedItemProduct = (props: LovedItemProductProps) => {
         <li className="flex py-6 border-6">
             <div onClick={() => router.push(`.product/${product.slug}`)}>
                 <img 
-                    src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${product.images[0].url}`} alt="Product"
+                    src={`${product.images[0].url}`} alt="Product"
                     className="w-24 h-24 overflow-hidden rounded-md sm:w-auto sm:h-32" />
 
             </div>

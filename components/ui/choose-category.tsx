@@ -20,7 +20,7 @@ export function ChooseCategory() {
                             className='relative max-w-xs mx-auto overflow-hidden bg-no-repeat bg-cover rounded'
                         >
                             <img 
-                                src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${category.image.url}`} 
+                                src={`${category.image.url}`} 
                                 alt={category.categoryName} 
                                 className='max-w-[270px] transition duration-300 ease-in-out rounded-lg hover:scale-105'
                             />
