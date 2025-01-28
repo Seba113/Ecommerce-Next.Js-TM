@@ -5,7 +5,6 @@ import { ProductType } from "@/types/product"
 import { Expand, ShoppingCart } from "lucide-react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
-import Image from "next/image"
 
 type ProductTypeProps = {
     product: ProductType
@@ -23,7 +22,7 @@ const ProductCard = (props: ProductTypeProps) => {
                 <CarouselContent>
                     {product.images.map((image) => (
                         <CarouselItem key={image.id} className="group">
-                            <Image src={`${image.url}`} alt={image.name} className="rounded-xl mx-auto"/>
+                            <img src={`${image.url}`} alt={image.name} className="rounded-xl mx-auto"/>
                             <div className="absolute w-full transition duration-200 opacity-0 group-hover:opacity-100 bottom-5">
                                 <div className="flex justify-center gap-x-6">
                                     <IconButton onClick={() => router.push(`/product/${product.slug}`) } icon={<Expand size={20} className="text-gray-600 " />} />

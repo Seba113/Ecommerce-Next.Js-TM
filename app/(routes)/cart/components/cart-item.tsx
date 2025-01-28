@@ -4,7 +4,6 @@ import { useCart } from "@/hooks/use-cart"
 import { formatPrice } from "@/lib/formatPrice"
 import { cn } from "@/lib/utils"
 import { X } from "lucide-react"
-import Image from "next/image"
 
 interface CartItemProps {
     product: ProductType
@@ -17,7 +16,7 @@ const CartItem = (props: CartItemProps) => {
     return (
         <li className="flex border-b py-6">
             <div onClick={() => router.push(`/product/${product.slug}`)} className="cursor-pointer">
-                <Image  
+                <img  
                     src={`${product.images[0].url}`} 
                     alt="product" 
                     className="overflow-hidden w-24 h-24 rounded-md sm:w-auto sm:h-32"
